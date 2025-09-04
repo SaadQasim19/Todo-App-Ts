@@ -35,3 +35,5 @@ function renderTasks() {
     taskList.appendChild(li);
   });
 }
+
+addBtn.addEventListener("click", addTask);
