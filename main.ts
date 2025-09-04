@@ -14,3 +14,19 @@ function addTask() {
     taskInput.value = "";
   }
 }
+
+function renderTasks() {
+  taskList.innerHTML = "";
+
+  tasks.forEach((task, index) => {
+    const li = document.createElement("li");
+    li.textContent = task;
+
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "❌";
+    delBtn.onclick = () => deleteTask(index);
+
+    li.appendChild(delBtn);
+    taskList.appendChild(li);
+  });
+}
