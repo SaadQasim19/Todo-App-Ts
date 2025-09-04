@@ -5,6 +5,7 @@ const taskList = document.getElementById("taskList") as HTMLUListElement;
 
 let tasks: string[] = [];
 
+
 function addTask() {
   const task = taskInput.value.trim();
 
@@ -15,10 +16,12 @@ function addTask() {
   }
 }
 
+
 function deleteTask(index: number) {
   tasks.splice(index, 1);
   renderTasks();
 }
+
 
 function renderTasks() {
   taskList.innerHTML = "";
