@@ -15,6 +15,11 @@ function addTask() {
   }
 }
 
+function deleteTask(index: number) {
+  tasks.splice(index, 1);
+  renderTasks();
+}
+
 function renderTasks() {
   taskList.innerHTML = "";
 
